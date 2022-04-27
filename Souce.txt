@@ -1,0 +1,8 @@
+https://docs.python.org/3/library/tkinter.html#module-tkinter
+https://pythonguides.com/python-tkinter-todo-list/
+https://pythonguides.com/python-gui-programming/
+https://realpython.com/python-gui-tkinter/
+https://docs.python.org/3/tutorial/classes.html
+https://pythonexamples.org/python-tkinter-window-background-color/
+https://stackoverflow.com/questions/48427501/tkinter-dynamic-frames-that-are-expandable-and-collapsible
+https://pythonguides.com/python-tkinter-listbox/
