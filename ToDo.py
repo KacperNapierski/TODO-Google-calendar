@@ -9,10 +9,10 @@ App['bg']='#292929'
 App.resizable(width=True, height=True)
 
 list_part=Frame(master=App, width=480, height=490, bg='#525252' )
-list_part.pack(padx=20, pady=20, side=tk.LEFT , expand= True)
+list_part.pack(padx=5, pady=5, side=tk.LEFT , expand= True)
 
 detail_part=Frame(master=App, width=480, height=490, bg='#525252' )
-detail_part.pack(padx=20, pady=20, side=tk.RIGHT , expand= True)
+detail_part.pack(padx=5, pady=5, side=tk.RIGHT , expand= True)
 
 listbox=Listbox(
     list_part,
@@ -21,6 +21,6 @@ listbox=Listbox(
     bg='#525252',
     fg='#ffffff'
 )
-listbox.pack(padx=15, pady=15, expand=True)
+listbox.pack(padx=5, pady=5, expand=True)
 
 App.mainloop()
