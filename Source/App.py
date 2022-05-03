@@ -1,11 +1,11 @@
-from tkinter import SOLID, Frame, Listbox, ttk
+from tkinter import SOLID, Frame, Listbox, Scrollbar, ttk
 import tkinter as tk
 from turtle import left
 import Logic as lg
 
 # ===== Varaibles =====
 
-tasks_number =3
+tasks_number =50
 
 
 # ===== App Window =====
@@ -74,32 +74,26 @@ tasks_frame.pack(
 # ===== Task Grid =====
 
 for i in range(tasks_number):
-    tasks_frame.columnconfigure(1, weight=1, minsize=400)
+    tasks_frame.columnconfigure(0, weight=1, minsize=400)
     
     task= tk.Frame(
         master=tasks_frame,
         relief=tk.FLAT,
-        borderwidth=2,
+        borderwidth=1,
         width=600
     )
-    task.pack(
-        side=tk.TOP,
-        # expand=True,
-        fill=tk.BOTH
-    )
-    task.grid(row=i, column=1)
+    task.grid(row=i, column=0)
     label = tk.Label(
         master=task,
         text =f'task {i}',
         bg='#525252',
         width=100,
-        height=1
+        # height=1
     )
     label.pack(
         side=tk.TOP,
         expand=True,
         fill=tk.BOTH
     )
-
 
 App.mainloop()
