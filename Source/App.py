@@ -71,29 +71,52 @@ tasks_frame.pack(
     fill=tk.BOTH
 )
 
-# ===== Task Grid =====
+# ===== Task List =====
 
-for i in range(tasks_number):
-    tasks_frame.columnconfigure(0, weight=1, minsize=400)
-    
-    task= tk.Frame(
-        master=tasks_frame,
-        relief=tk.FLAT,
-        borderwidth=1,
-        width=600
-    )
-    task.grid(row=i, column=0)
-    label = tk.Label(
-        master=task,
-        text =f'task {i}',
-        bg='#525252',
-        width=100,
-        # height=1
-    )
-    label.pack(
-        side=tk.TOP,
-        expand=True,
-        fill=tk.BOTH
-    )
+langs = ('Java', 'C#', 'C', 'C++', 'Python',
+        'Go', 'JavaScript', 'PHP', 'Swift', 'V',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',
+        'Java', 'C#', 'C', 'C++', 'Python',)
+
+langs_var = tk.StringVar(value=langs)
+
+task_list = tk.Listbox(
+    master= tasks_frame,
+    listvariable=langs_var,
+    height=50,
+    width=100,
+    bg='#525252',
+    relief=tk.FLAT,
+    borderwidth=0,
+    selectmode='extended')
+
+task_list.grid(
+    column=0,
+    row=0,
+    sticky='nwes'
+)
+#  link a scrollbar to a list
+scrollbar = ttk.Scrollbar(
+    master=tasks_frame,
+    orient='vertical',
+    command=task_list.yview
+)
+
+task_list['yscrollcommand'] = scrollbar.set
+
+scrollbar.grid(
+    column=1,
+    row=0,
+    sticky='ns')
+
+task_list.bind('<<ListboxSelect>>', lg.items_selected(task_list))
+
 
 App.mainloop()

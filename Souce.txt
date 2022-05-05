@@ -7,3 +7,6 @@ https://pythonexamples.org/python-tkinter-window-background-color/
 https://stackoverflow.com/questions/48427501/tkinter-dynamic-frames-that-are-expandable-and-collapsible
 https://pythonguides.com/python-tkinter-listbox/
 https://tkdocs.com/tutorial/index.html
+https://www.pythontutorial.net/tkinter/tkinter-listbox/
+https://www.tutorialspoint.com/python/tk_listbox.htm
+https://stackoverflow.com/questions/16188420/tkinter-scrollbar-for-frame
